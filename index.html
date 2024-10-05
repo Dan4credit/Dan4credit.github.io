@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta property="og:image" content="https://blogger.googleusercontent.com/img/a/AVvXsEhCuPN9D05lmMXW7eQD2QBeMf38lm_ZgCDYIgyr43yGkx_3ZKgm_wp_gFeMmm0oQWxk7GrGoYt-vN210oX5KtivYIH9h6VOYUbjBDUoBJzgOJDh4EZQ2IVBi0v9S16jKKX7rGF4RMr50NvjGdzXfymKzQTpKq1zfenq7xTOc_yiHYHfWNFvN5GQ2SGN6p_9">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dana-Amanah</title>
+    <style>
+        /* Popup pertama */
+        #popup1 {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 10px;
+            z-index: 1000;
+            display: none;
+        }
+
+        #popup1 img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Popup pertama -->
+    <div id="popup1">
+        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhCuPN9D05lmMXW7eQD2QBeMf38lm_ZgCDYIgyr43yGkx_3ZKgm_wp_gFeMmm0oQWxk7GrGoYt-vN210oX5KtivYIH9h6VOYUbjBDUoBJzgOJDh4EZQ2IVBi0v9S16jKKX7rGF4RMr50NvjGdzXfymKzQTpKq1zfenq7xTOc_yiHYHfWNFvN5GQ2SGN6p_9" alt="Popup Image 1">
+    </div>
+
+    <script>
+        window.onload = function() {
+            // Tampilkan popup pertama
+            var popup1 = document.getElementById('popup1');
+
+            popup1.style.display = 'block';
+
+            // Setelah 2 detik, sembunyikan popup pertama dan arahkan ke halaman baru
+            setTimeout(function() {
+                popup1.style.display = 'none';
+                window.location.href = 'patok.html';
+            }, 2000);
+        };
+    </script>
+</body>
+</html>
