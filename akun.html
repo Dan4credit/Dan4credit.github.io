@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Dana Amanah</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d0d0d;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 360px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top:-77%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.logo img {
+    width: 40px;
+}
+
+.phone-number {
+    font-size: 15px;
+    
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #555;
+}
+
+.menu-icon img {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+}
+
+.menu-item span {
+    font-size: 16px;
+}
+
+        .nav {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Latar belakang transparan untuk nav */
+            display: flex;
+            justify-content: space-around;
+            padding: 3px 0;
+        }
+
+        /* Gaya untuk ikon di dalam nav */
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        /* Gaya untuk ikon */
+        .nav a img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 5px;
+        }
+
+        /* Animasi hover untuk ikon */
+        .nav a:hover {
+            transform: scale(1.1); /* Memperbesar sedikit saat di-hover */
+        }
+        
+        .gambar {
+      width: 100%;
+      margin-bottom: 0px;
+    }
+
+    .gambar img {
+      width: 100%;
+      object-fit: cover;
+      margin-bottom: 0px;
+    }
+
+</style>
+<body>
+
+  
+    <div class="container">
+        
+        <div class="header">
+            <div class="logo">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhCuPN9D05lmMXW7eQD2QBeMf38lm_ZgCDYIgyr43yGkx_3ZKgm_wp_gFeMmm0oQWxk7GrGoYt-vN210oX5KtivYIH9h6VOYUbjBDUoBJzgOJDh4EZQ2IVBi0v9S16jKKX7rGF4RMr50NvjGdzXfymKzQTpKq1zfenq7xTOc_yiHYHfWNFvN5GQ2SGN6p_9" alt="Dana Amanah Logo">
+            </div>
+            <div class="phone-number">
+                <p>+62 82281097336</p>
+            </div>
+        </div>
+
+        <div class="menu">
+            <a href="bank.html" class="menu-item">
+                <div class="menu-icon">
+                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhZVl5GMy7sYNUWm4FBCZcQf1P1vCQprkw_l2EVPYYm7OD0-6ljiR8NuKHiVpriaicPCTTVq1jw5DMOAfpaFfzln9RObv1Wp4BBlsj1Ds9J0Ft3ApJYY2-Ymwwha7thtY4Z88Fmxgw3yKAN9IVk2703RHcSk4I_DRjSto1IbvYp-XNgoZQ_nGHiGgx1W7SD" alt="Rek">
+                </div>
+                <span>Tambah Kartu Bank</span>
+            </a>
+            <a href="tentang.html" class="menu-item">
+                <div class="menu-icon">
+                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiT7qZGo9mwy-xggyHXc2oXYRSpTlzQ2XX26ZMpYDMxP729TgNg8CsH-41x411ZA9sR4c6mpkDFho0EyLr69GxQMLO9867Olzd_QMDH8R_kTzd-uLhWuWLC8wovzrKmHHUKphyjHb6XdsrxeY3mYj4exyF4imQ-n4zAT_htx82qYVESQ-6s5gAFHJC9OvmI" alt="Tentang Kami">
+                </div>
+                <span>Tentang Kami</span>
+            </a>
+            <a href="kebijakan.html" class="menu-item">
+                <div class="menu-icon">
+                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjC2facjFmeyozwk7STjl4VNoRcpowGr15qO0Hm8i_IJzgYa7lvSg-6msDE7eBmD67IkPkpsP0orKjgBu12cK5aBGuS03BkyOiq1FsrNfSkbFs6yYrobh97FRta99HrtPdEKgt1DmwpJ7nZqNEdPVk690EhXNbBzxCfaCruuCEG1PpTaRrDSRipjKkJTv_Y" alt="Bantuan">
+                </div>
+                <span>Kebijakan Privasi</span>
+            </a>
+            <a href="seting.html" class="menu-item">
+                <div class="menu-icon">
+                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEi997yoFsXFVzr6Ldw9R7T31O0ZYbKZpBRdo4ktZXhOMPYDhkrj16ECBH_isskvtQ_ankN8b6Pb6oMMJPKyAXn2yvikC0p60uAKD66410AtW0C5BucdchNCQaIyQF_ZwrqXIMnSZ0mrDo4n8_1xL-0bLwV3KaTpV-ISv7jFZxLjdZAepoJGtjhol8dMuQis" alt="Rokok">
+                </div>
+                <span>Settings</span>
+            </a>
+        </div>
+    </div>
+    <div class="nav">
+            <!-- Link 1 dengan ikon -->
+            <a href="pak.html">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhJTi4tF25WyKywVda2R2c8cQMP--V4QPrfzXncEwh1PbgiYeqnT7G-8LKLzvtz6RPpCSQbda5uqo3Ln5OUXH1qGrbvOk1DXjIdQXkZCaSDByzqpGIO-lRR4masGxPGXuq0ks22b1BfNLPycocFDjy1NIiPm4iO8vfBzplfBPZ5r5J3UqgGnTKhYTaYNGj0" alt="Rek Icon"/>
+            </a>
+            <!-- Link 2 dengan ikon di tengah -->
+            <a href="pinjaman.html">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhtxk5WkMENaj3Tq1mGRK8xqQsq6REv1MWFIK5GSL-W-d0NngCGvDXGrv1LKI-FQIqA9oX5kA4DiHtwaToO-mNBBvfNUU4rJFJVXcSI5EtBrtiGISfSSSeuFzG4qRU5kAjoQXBaFMPjLi0eLxE3P9qArV509j7QJXHjIKZc4GQeVnK59H0IwvChUQt_ACda" alt="Tentang Icon"/>
+            </a>
+            <!-- Link 3 dengan ikon -->
+            <a href="akun.html">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEj9qYi_xOoPqPdY_Ee6CXKJQL6VxHcZujd4nMDbjXrc_tyxZZ8zfJ0Cl0zc-3og1WjRIbVCFxdLs4YwgqECbWE_l8FTQCFKSTEjBReGdnH6-RsiBXfKF5K0vwl774QXiT_lAsznRKwJRCkfmBAYNhqaeJqIYofbb6xgZgadpStFieP1gCmoaXz5wnyJNVNF" alt="Bantuan Icon"/>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

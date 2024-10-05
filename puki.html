@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Halaman-Pinjaman</title>
+    <style>
+        /* Gaya dasar untuk tampilan */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Latar belakang gambar dengan penyesuaian */
+        .background {
+            background-image: url('https://blogger.googleusercontent.com/img/a/AVvXsEhLMX056_L4D_4oY8dZa1Knvz50aQs5Ol8von0qlbNd20Sc1NeDtZYHfwMa_SJaLrdCnm1GjIW91F0r0ImsvsNg7qXEoOYq_bj6gSESRaz1oMcSfG7liNNeCaAVCW4K8whtYpbBs_GOpW_oIfir_rdoH0ro0K2DLZutCEVoTrp7aEWmmSG71fPjA2eFnf4c'); /* Ganti URL ini dengan gambar latar belakang Anda */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            height: 100%;
+        }
+
+        /* Gaya untuk navigasi di bagian bawah */
+        .nav {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Latar belakang transparan untuk nav */
+            display: flex;
+            justify-content: space-around;
+            padding: 3px 0;
+        }
+
+        /* Gaya untuk ikon di dalam nav */
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        /* Gaya untuk ikon */
+        .nav a img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 5px;
+        }
+
+        /* Animasi hover untuk ikon */
+        .nav a:hover {
+            transform: scale(1.1); /* Memperbesar sedikit saat di-hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Container latar belakang -->
+    <div class="background">
+        <!-- Navigasi di bagian bawah -->
+        <div class="nav">
+            <!-- Link 1 dengan ikon ke home.html -->
+            <a href="pak.html">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhJTi4tF25WyKywVda2R2c8cQMP--V4QPrfzXncEwh1PbgiYeqnT7G-8LKLzvtz6RPpCSQbda5uqo3Ln5OUXH1qGrbvOk1DXjIdQXkZCaSDByzqpGIO-lRR4masGxPGXuq0ks22b1BfNLPycocFDjy1NIiPm4iO8vfBzplfBPZ5r5J3UqgGnTKhYTaYNGj0" alt="Home Icon"/>
+                <div></div>
+            </a>
+            <!-- Link 2 dengan ikon di tengah ke pinjam.html -->
+            <a href="pinjaman.html">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhtxk5WkMENaj3Tq1mGRK8xqQsq6REv1MWFIK5GSL-W-d0NngCGvDXGrv1LKI-FQIqA9oX5kA4DiHtwaToO-mNBBvfNUU4rJFJVXcSI5EtBrtiGISfSSSeuFzG4qRU5kAjoQXBaFMPjLi0eLxE3P9qArV509j7QJXHjIKZc4GQeVnK59H0IwvChUQt_ACda" alt="Pinjam Icon"/>
+                <div></div>
+            </a>
+            <!-- Link 3 dengan ikon ke akun.html -->
+            <a href="akun.html">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEj9qYi_xOoPqPdY_Ee6CXKJQL6VxHcZujd4nMDbjXrc_tyxZZ8zfJ0Cl0zc-3og1WjRIbVCFxdLs4YwgqECbWE_l8FTQCFKSTEjBReGdnH6-RsiBXfKF5K0vwl774QXiT_lAsznRKwJRCkfmBAYNhqaeJqIYofbb6xgZgadpStFieP1gCmoaXz5wnyJNVNF" alt="Akun Icon"/>
+                <div></div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
