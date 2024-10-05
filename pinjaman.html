@@ -1,73 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-<meta charset="UTF-8">
- 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tagihan Saya</title>
-<style>
-.blue-text {
-  color: blue;
-  font-size: 13px;
-  margin-right:-8px;
-  margin-left:7px;
-  font-weight:bold;
-  position:center;
-  
-}
-    img {
-        width: 100%;
-        height: auto;
-    }
-    .button {
-        display: inline-block;
-        padding: 17px 120px; /* Lebar padding disesuaikan */
-        background-color: #ffa500;
-        color: #fff;
-        border: none;
-        border-radius: 15px;
-        cursor: pointer;
-        font-size: 17px;
-        margin-top: 20px;
-        font-weight: bold;
-        font-size: 12px;
-        padding-bottom:13px;
-    }
-    .spaced-text {
-    letter-spacing: 1px; /* Sesuaikan jumlah spasi sesuai kebutuhan */
-    font-size: 13px;
-    font-weight: bold;
-    margin-top:-20px;
-    color: #696969;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Kartu Pinjaman</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
 
-</style>
+        .loan-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            width: 300px;
+            margin-left:-18px;
+        }
+
+        .loan-card img {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .loan-card .status {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #ffa500;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        .loan-details {
+            margin-top: 60px;
+        }
+
+        .loan-details p {
+            margin: 5px 0;
+        }
+
+        .loan-details p span {
+            font-weight: bold;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .actions button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-extend {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .btn-pay {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-<div style="text-align: center;">
-    <img src="aaa.jpg" alt="Foto">
-    <br><br><p class="spaced-text">Pinjaman&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rp.1.600.000</p><br>
-        <p class="spaced-text">Keringanan Pembayaran&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rp.1.100.000</p><br>
-    <p class="spaced-text">Pembayaran  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rp.500.000</p>
-    <button class="button" onclick="redirectToPayPage()">Pembayaran</button>
-</div><br><div></div><br><div></div><br>
 
+    <!-- Kartu Pinjaman 1 -->
+    <div class="loan-card">
+        <img src="logo1.png" alt="Dana Flow Logo">
+        <div class="status">Belum Lunas</div>
+        <div class="loan-details">
+            <p>No Pinjaman <span>20241001182032UyYh</span></p>
+            <p>Jumlah Pinjaman <span>Rp 2.200.000</span></p>
+            <p>Tenor Pinjaman <span>7 Hari</span></p>
+            <p>No Rekening Bank <span>Mandiri...3427</span></p>
+            <p>Jumlah Yang harus dilunasi <span>Rp 2.200.000</span></p>
+            <p>Batas Tanggal Pelunasan <span>2024-10-07</span></p>
+        </div>
+        <div class="actions">
+            <button class="btn-extend">Saya Ingin Perpanjang</button>
+            <!-- Form untuk submit ke halaman pelunasan 1 -->
+            <form action="abadi1.html" method="POST">
+                <button type="submit" class="btn-pay">Saya Ingin Melunasi</button>
+            </form>
+        </div>
+    </div>
 
-</div>
-
-<script>
-    function redirectToPayPage() {
-        window.location.href = "abadi1.html"; // Tombol pertama menuju bayar.html
-    }
-
-    function redirectToPayPage2() {
-        window.location.href = "abadi2.html"; // Tombol kedua menuju bayar2.html
-    }
-    
-    function redirectToPayPage2() {
-        window.location.href = "abadi3.html"; // Tombol kedua menuju bayar2.html
-    }
-</script>
+    <!-- Kartu Pinjaman 2 -->
+    <div class="loan-card">
+        <img src="logo2.png" alt="Pinjam Yuk Logo">
+        <div class="status">Belum Lunas</div>
+        <div class="loan-details">
+            <p>No Pinjaman <span>20241001182032F4GY</span></p>
+            <p>Jumlah Pinjaman <span>Rp 2.200.000</span></p>
+            <p>Tenor Pinjaman <span>7 Hari</span></p>
+            <p>No Rekening Bank <span>Mandiri...3427</span></p>
+            <p>Jumlah Yang harus dilunasi <span>Rp 2.200.000</span></p>
+            <p>Batas Tanggal Pelunasan <span>2024-10-07</span></p>
+        </div>
+        <div class="actions">
+            <button class="btn-extend">Saya Ingin Perpanjang</button>
+            <!-- Form untuk submit ke halaman pelunasan 2 -->
+            <form action="abadi1.html" method="POST">
+                <button type="submit" class="btn-pay">Saya Ingin Melunasi</button>
+            </form>
+        </div>
+    </div>
 
 </body>
 </html>
