@@ -2,13 +2,23 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informasi Pembayaran</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             padding: 20px;
+        }
+
+        /* Gaya untuk gambar di bagian atas */
+        .header-image {
+            display: block;
+            margin: 0 auto;
+            max-width: 110%;
+            height: auto;
+            margin-bottom: 20px;
+            margin-left:-15px;
         }
 
         /* Box Kode Pembayaran */
@@ -99,26 +109,48 @@
 
         /* CSS untuk notifikasi */
         .popup-notification {
-    position: fixed;
-    bottom: 100%; /* Mengubah nilai bottom untuk menaikkan posisi */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #fff;
-    color: #000;
-    padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    display: none;
-    z-index: 1000;
-}
+            position: fixed;
+            bottom: 100px; /* Mengubah nilai bottom untuk menaikkan posisi */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #fff;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            display: none;
+            z-index: 1000;
+        }
+        
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin-top:-10px;
+        }
 
+        .back-button span {
+            margin-left: 5px; /* Menambahkan jarak sedikit antara tanda < dan teks Back */
+        }
     </style>
 </head>
 <body>
+      <a href="pinjaman.html" class="back-button">
+        &lt;<span>Back</span>
+    </a><br>
+
+    <!-- Gambar di bagian atas -->
+    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEj-ABKHHhv9epRL-gcqiGRXVABj2-yvswI4-PzfcgMc6u2pcl7XIEtc9NtE46nMK-c7ojRh8JHd9hpGPNWYmXlFmixq05d47FZwbOrLvGUtKmvD1Mylrzl7lJLmMBxEyO8hkwvPOs77QTMUci1bd2Obkpi03Zrup4WuZLZN2dLaagJbHYxYNnD7I8u9UoNw" alt="Gambar Pembayaran" class="header-image">
 
     <!-- Kode Pembayaran -->
     <div class="payment-code-box">
-        <span id="payment-code">135026000003861274</span>
+        <span id="payment-code">100451920026955</span>
         <button class="copy-button" onclick="copyCode()">Salin</button>
     </div>
 
@@ -167,7 +199,7 @@
                 <li>Masukan "Rek Pembayaran (10352xxxx) Yang Sudah Di salin di atas"</li>
                 <li>Masukan "Jumlah Pembayaran"</li>
                 <li>Lanjut</li>
-                <li>Komfirmasi Transfer</li>
+                <li>Konfirmasi Transfer</li>
                 <li>Masukan PIN</li>
                 <li>Pembayaran akan diproses</li>
                 <li>Selesai</li>
