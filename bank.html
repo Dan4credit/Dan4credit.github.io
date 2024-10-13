@@ -1,64 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Halaman-Pinjaman</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#4CAF50">
+    <title>Bank Info</title>
     <style>
-        /* Gaya dasar untuk tampilan */
-        body, html {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            height: 100%;
-            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
         }
 
-        /* Latar belakang gambar dengan penyesuaian */
-        .background {
-            background-image: url('gantibank.jpg'); /* Ganti URL ini dengan gambar latar belakang Anda */
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            height: 100%;
-        }
-
-        /* Gaya untuk navigasi di bagian bawah */
-        .nav {
+        /* Tombol Kembali */
+        .back-button {
             position: absolute;
-            bottom: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* Latar belakang transparan untuk nav */
-            display: flex;
-            justify-content: space-around;
-            padding: 3px 0;
-        }
-
-        /* Gaya untuk ikon di dalam nav */
-        .nav a {
-            color: #fff;
+            top: 20px;
+            left: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
             text-decoration: none;
-            font-size: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .back-button span {
+            margin-left: 5px; /* Menambahkan jarak sedikit antara tanda < dan teks Back */
+        }
+
+        /* Elemen Box Hijau */
+        .green-box {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: left;
+            border-radius:15px;
+            padding-left: 40px;
+            margin-top: 60px; /* Memberi ruang agar tombol <Back di atas */
+        }
+
+        .container {
+            padding: 10px;
             text-align: center;
-            transition: transform 0.3s ease;
+        }
+        h1 {
+          font-size: 14px;
+        }
+        h2 {
+          font-size: 14px;
         }
 
-        /* Gaya untuk ikon */
-        .nav a img {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 5px;
-        }
-
-        /* Animasi hover untuk ikon */
-        .nav a:hover {
-            transform: scale(1.1); /* Memperbesar sedikit saat di-hover */
-        }
     </style>
 </head>
 <body>
-    <!-- Container latar belakang -->
-    <div class="background">
-        </div>
+
+    <!-- Tombol Kembali -->
+    <a href="halaman-lain.html" class="back-button">
+        &lt;<span>Back</span>
+    </a>
+
+    
+    <div class="green-box">
+        BANK BNI<br><br>
+        <h1>No Rekening<br></h1>
+        <h2>0138172021</h2>
     </div>
+
+    <div class="container">
+        <!-- Konten lainnya bisa ditempatkan di sini -->
+    </div>
+
 </body>
 </html>
